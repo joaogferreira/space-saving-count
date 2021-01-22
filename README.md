@@ -9,7 +9,7 @@ Consiste na contagem de palavras num texto (obra literária em Português ou Ing
 pip install -r requirements.txt
 ```
 
-## Usage - Examplos
+## Usage - Exemplos
 
 ```python
 python3 sscount.py <text_file>
