@@ -5,14 +5,14 @@ Consiste na contagem de palavras num texto (obra literária em Português ou Ing
 
 ## Pré-requisitos 
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
 ## Usage - Examplos
 
 ```python
-python3 TODO
+python3 sscount.py <text_file>
 ```
 
 
