@@ -1,0 +1,23 @@
+hipotese A - contagem dos itens mais frequentes
+
+space-saving-count
+
+hipotese A-2 
+ficheiros de texto de obras literárias - pt e ingles  
+
+contador exacto vs contador ssc (space saving count)
+
+contar palavras ! 
+
+
+tarefas:
+
+1 - funcao contador exacto 
+2 - funcao ssc 
+3 - arranjar textos pts e ing (3 de cada)
+4 - escrever resultados num csv (palavra,exacto,ssc(10),ssc(15),ssc(20))
+e erro relativo (palavra, ssc(10)%, ssc(15)%, ssc(20)%) e fazer as tabelas
+
+
+
+
