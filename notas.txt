@@ -13,10 +13,10 @@ contar palavras !
 tarefas:
 
 1 - funcao contador exacto - CHECK 
-2 - funcao ssc 
+2 - funcao ssc - CHECK 
 3 - arranjar textos pts e ing (3 de cada) - CHECK
 4 - escrever resultados num csv (palavra,exacto,ssc(10),ssc(15),ssc(20))
-e erro relativo (palavra, ssc(10)%, ssc(15)%, ssc(20)%) e fazer as tabelas
+e erro relativo (palavra, ssc(10)%, ssc(15)%, ssc(20)%) e fazer as tabelas - CHECK 
 5 - escrever relatorio
 
 
