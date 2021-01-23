@@ -154,7 +154,7 @@ def main(text_file):
     
     with open('results/results_'+file_name+'.csv', 'w') as f:
         writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        writer.writerow([ 'char','exact','ssc10','ssc15','ssc20','ssc25','ssc50' ] )
+        writer.writerow([ 'char','exact2','ssc10','ssc15','ssc20','ssc25','ssc50' ] )
         for char in exact:
             if char in ssc10:
                 s10=ssc10[char]
