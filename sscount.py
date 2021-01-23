@@ -16,21 +16,21 @@ import csv
 
 logger = logging.getLogger('root')
 
-def sscounter(chars, k):
+def ssc(chars, k):
     '''
     returns a dictionary <char,count>
     '''
     counters = {}                   
-    for elem in chars:
-        elem = elem.lower()              
-        if elem in counters:        
-            counters[elem] += 1
+    for char in chars:
+        char = char.lower()              
+        if char in counters:        
+            counters[char] += 1
         else:                               
-            if len(counters) + 1 > k: #Tamanho actual mais um (que corresponde ao novo elemento)
+            if len(counters) + 1 > k:
                 min_counter = min(counters, key=counters.get)       
-                counters[elem] = counters.pop(min_counter) + 1      
+                counters[char] = counters.pop(min_counter) + 1      
             else:
-                counters[elem] = 1
+                counters[char] = 1
     
     logger.info('Completed Space Saving Counter (k = {}).'.format(k))    
     
@@ -96,9 +96,9 @@ def main(text_file):
 
     exact = exact_counter(chars)
 
-    
+    print(len(chars))
     # SPACE SAVING COUNTER , K=10
-    ssc10 = sscounter(chars,10) 
+    ssc10 = ssc(chars,10) 
 
     relative_error_10 = relative_error(exact,ssc10)
 
@@ -108,7 +108,7 @@ def main(text_file):
     print( 'Avg Relative Error: ' + str(avg_error(relative_error_10)))
     
     # SPACE SAVING COUNTER , K=15
-    ssc15 = sscounter(chars,15) 
+    ssc15 = ssc(chars,15) 
 
     relative_error_15 = relative_error(exact,ssc15)
 
@@ -118,7 +118,7 @@ def main(text_file):
     print( 'Avg Relative Error: ' + str(avg_error(relative_error_15)))
     
     # SPACE SAVING COUNTER , K=20
-    ssc20 = sscounter(chars,20) 
+    ssc20 = ssc(chars,20) 
 
     relative_error_20 = relative_error(exact,ssc20)
 
@@ -128,7 +128,7 @@ def main(text_file):
     print( 'Avg Relative Error: ' + str(avg_error(relative_error_20)))
 
     # SPACE SAVING COUNTER , K=25
-    ssc25 = sscounter(chars,25) 
+    ssc25 = ssc(chars,25) 
 
     relative_error_25 = relative_error(exact,ssc25)
 
@@ -139,7 +139,7 @@ def main(text_file):
 
 
     # SPACE SAVING COUNTER , K=50
-    ssc50 = sscounter(chars,50) 
+    ssc50 = ssc(chars,50) 
 
     relative_error_50 = relative_error(exact,ssc50)
 
