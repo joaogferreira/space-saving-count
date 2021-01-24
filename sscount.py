@@ -88,7 +88,6 @@ def main(text_file):
 
     exact = exact_counter(chars)
 
-    print(len(chars))
     # SPACE SAVING COUNTER , K=10
     ssc10 = ssc(chars,10) 
 
