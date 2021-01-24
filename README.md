@@ -5,9 +5,6 @@ Consiste na contagem de caracteres num texto (obra literária em Português ou I
 
 ## Pré-requisitos 
 
-```bash
-pip install -r requirements.txt
-```
 
 ## Usage - Exemplos
 

@@ -10,11 +10,8 @@ Example of usage:
 
 import sys
 import argparse
-import coloredlogs, logging
 import csv
 
-
-logger = logging.getLogger('root')
 
 def ssc(chars, k):
     '''
@@ -31,9 +28,6 @@ def ssc(chars, k):
                 counters[char] = counters.pop(min_counter) + 1      
             else:
                 counters[char] = 1
-    
-    logger.info('Completed Space Saving Counter (k = {}).'.format(k))    
-    
     return counters
 
 
@@ -49,7 +43,7 @@ def exact_counter(chars):
         else:
             counter[char]=1
     
-    logger.info('Completed Exact Counter.')
+
     return counter
 
 
@@ -67,11 +61,9 @@ def read_file(text_file):
                             chars.append(l)
 
     except:
-        logger.error('File not found.')
+        print('File not found.')
         sys.exit(2) #Code 2 - Command line syntax errors
 
-    logger.info('Text file read with success.')
-    
     return chars
 
 def relative_error(exact, ssc):
@@ -106,7 +98,8 @@ def main(text_file):
     print( 'Max Relative Error: ' + str(relative_error_10[list(relative_error_10.keys())[-1] ]))
     print( 'Min Relative Error: ' + str(relative_error_10[list(relative_error_10.keys())[0] ]))
     print( 'Avg Relative Error: ' + str(avg_error(relative_error_10)))
-    
+    print( '--------------------------')
+
     # SPACE SAVING COUNTER , K=15
     ssc15 = ssc(chars,15) 
 
@@ -116,6 +109,7 @@ def main(text_file):
     print( 'Max Relative Error: ' + str(relative_error_15[list(relative_error_15.keys())[-1] ]))
     print( 'Min Relative Error: ' + str(relative_error_15[list(relative_error_15.keys())[0] ]))
     print( 'Avg Relative Error: ' + str(avg_error(relative_error_15)))
+    print( '--------------------------')
     
     # SPACE SAVING COUNTER , K=20
     ssc20 = ssc(chars,20) 
@@ -126,6 +120,7 @@ def main(text_file):
     print( 'Max Relative Error: ' + str(relative_error_20[list(relative_error_20.keys())[-1] ]))
     print( 'Min Relative Error: ' + str(relative_error_20[list(relative_error_20.keys())[0] ]))
     print( 'Avg Relative Error: ' + str(avg_error(relative_error_20)))
+    print( '--------------------------')
 
     # SPACE SAVING COUNTER , K=25
     ssc25 = ssc(chars,25) 
@@ -136,6 +131,7 @@ def main(text_file):
     print( 'Max Relative Error: ' + str(relative_error_25[list(relative_error_25.keys())[-1] ]))
     print( 'Min Relative Error: ' + str(relative_error_25[list(relative_error_25.keys())[0] ]))
     print( 'Avg Relative Error: ' + str(avg_error(relative_error_25)))
+    print( '--------------------------')
 
 
     # SPACE SAVING COUNTER , K=50
@@ -206,16 +202,11 @@ def main(text_file):
                 e50='-'
             writer.writerow( [ char,e10,e15,e20,e25,e50 ] )
 
-    logger.info('Wrote results to .csv files in results/ folder.')
     
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description='Count chars from a text file')
     parser.add_argument('-f', metavar='<text_file>', help='Text file', required=True)
     args = parser.parse_args()
-    
-    coloredlogs.install(logging.INFO)
-	
-    logger.setLevel(logging.INFO)
 
     main(args.f)
