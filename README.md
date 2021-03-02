@@ -4,7 +4,9 @@ Este projeto foi desenvolvivo no âmbito da UC Algoritmos Avançados do Mestrado
 
 Consiste na contagem de caracteres num texto (obra literária em Português ou Inglês), utilizando um contador exato e um contador Space Saving.
 
-O directório text contém ficheiros de textos que podem ser utilizados para testar o script desenvolvido. 
+O directório text contém ficheiros de texto que podem ser utilizados para testar o script desenvolvido. 
+
+Estes ficheiros foram retirados do website [Project Gutenberg](https://www.gutenberg.org/)
 
 Foi utilizada a linguagem de programação Python. 
 
