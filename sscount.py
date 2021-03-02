@@ -15,7 +15,9 @@ import csv
 
 def ssc(chars, k):
     '''
-    returns a dictionary <char,count>
+    Receives as argument the array built before in function read_file and 
+    counts the ocurrence of each char, following the logic of a space saving counter
+    Returns a dictionary <char,count>
     '''
     counters = {}                   
     for char in chars:
@@ -33,7 +35,9 @@ def ssc(chars, k):
 
 def exact_counter(chars):
     '''
-    returns a dictionary <char,count>
+    Receives as argument the array built before in function read_file and 
+    counts the ocurrence of each char
+    Returns a dictionary <char,count>
     '''
     counter = {}
     for char in chars:
@@ -49,7 +53,8 @@ def exact_counter(chars):
 
 def read_file(text_file):
     '''
-    returns an array of chars
+    Read a file and return an array with all the chars in that file
+    Returns an array
     '''
     chars = []
     try:
@@ -66,22 +71,7 @@ def read_file(text_file):
 
     return chars
 
-def relative_error(exact, ssc):
-    rel_error = {}
-    for key in ssc:
-        rel_error[key] = round(( abs(ssc[key]-exact[key]) / exact[key]) * 100, 3)
-    
-    rel_error = {k: v for k, v in sorted(rel_error.items(), key=lambda item: item[1])}
-    
-    return rel_error
 
-def avg_error(errors):
-    sum = 0
-    n = 0
-    for e in errors:
-        sum += errors[e]
-        n += 1
-    return round(sum/n,2) 
 
 def main(text_file):
     chars = read_file(text_file)
@@ -106,7 +96,32 @@ def main(text_file):
     
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description='Count chars from a text file')
+    
     parser.add_argument('-f', metavar='<text_file>', help='Text file', required=True)
+    
     args = parser.parse_args()
 
     main(args.f)
+
+
+   
+'''
+# Functions relative_error and avg_error were used for results and are not needed for the code to run correctly
+
+def relative_error(exact, ssc):
+    rel_error = {}
+    for key in ssc:
+        rel_error[key] = round(( abs(ssc[key]-exact[key]) / exact[key]) * 100, 3)
+    
+    rel_error = {k: v for k, v in sorted(rel_error.items(), key=lambda item: item[1])}
+    
+    return rel_error
+
+def avg_error(errors):
+    sum = 0
+    n = 0
+    for e in errors:
+        sum += errors[e]
+        n += 1
+    return round(sum/n,2) 
+'''
