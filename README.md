@@ -18,7 +18,7 @@ python3 sscount.py -f text/english/hamlet.txt
 
 
 ## Autor
-[João Ferreira](https://github.com/joaogferreira)(jgmpof@gmail.com)
+[João Ferreira](https://github.com/joaogferreira) (jgmpof@gmail.com)
 
 
 ## License
