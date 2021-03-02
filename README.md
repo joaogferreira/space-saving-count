@@ -11,14 +11,14 @@ Foi utilizada a linguagem de programação Python.
 ## Usage - Exemplos
 
 ```python
-python3 sscount.py <text_file>
-python3 sscount.py text/portuguese/os_maias.txt
-python3 sscount.py text/english/hamlet.txt
+python3 sscount.py -f <text_file>
+python3 sscount.py -f text/portuguese/os_maias.txt
+python3 sscount.py -f text/english/hamlet.txt
 ```
 
 
 ## Autor
-João Ferreira (jgmpof@gmail.com)
+[João Ferreira](https://github.com/joaogferreira)(jgmpof@gmail.com)
 
 
 ## License
