@@ -1,4 +1,4 @@
-# Count chars
+# Space Saving Count - Count chars
 
 Este projeto foi desenvolvido no âmbito da UC Algoritmos Avançados do Mestrado em Engenharia Informática da Universidade de Aveiro.
 
