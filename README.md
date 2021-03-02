@@ -6,7 +6,7 @@ Consiste na contagem de caracteres num texto (obra literária em Português ou I
 
 O directório text contém ficheiros de texto que podem ser utilizados para testar o script desenvolvido. 
 
-Estes ficheiros foram retirados do website [Project Gutenberg](https://www.gutenberg.org/)
+Estes ficheiros foram retirados do website [Project Gutenberg](https://www.gutenberg.org/).
 
 Foi utilizada a linguagem de programação Python. 
 
